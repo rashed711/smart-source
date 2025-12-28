@@ -24,12 +24,12 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled ? 'py-3' : 'py-6'}`}>
-      <div className="container mx-auto px-6">
-        <div className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? 'bg-slate-50/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.1)] border border-slate-200' : 'bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'}`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`flex items-center justify-between px-4 md:px-6 py-3 rounded-2xl md:rounded-full transition-all duration-500 ${isScrolled ? 'bg-slate-50/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.1)] border border-slate-200' : 'bg-white/40 backdrop-blur-md border border-white/40 shadow-sm'}`}>
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-200">S</div>
-            <span className={`text-xl font-black tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}>Smart Source</span>
+            <div className="w-8 h-8 md:w-9 md:h-9 bg-blue-600 rounded-lg md:rounded-xl flex items-center justify-center text-white font-bold text-base md:text-lg shadow-lg shadow-blue-200">S</div>
+            <span className="text-lg md:text-xl font-black tracking-tight text-slate-900">Smart Source</span>
           </div>
 
           {/* Desktop Nav */}
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
               <a 
                 key={link.href} 
                 href={link.href} 
-                className={`font-bold text-sm transition-all relative group ${isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-800 hover:text-blue-700'}`}
+                className="font-bold text-sm transition-all relative group text-slate-700 hover:text-blue-600"
               >
                 {link.name}
                 <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <button className="lg:hidden text-slate-900 p-2 hover:bg-slate-100 rounded-full transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="lg:hidden text-slate-900 p-2 hover:bg-slate-100 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -90,10 +90,6 @@ const Header: React.FC = () => {
             >
               تواصل معنا الآن
             </a>
-          </div>
-          
-          <div className="mt-auto pt-10 text-center">
-            <p className="text-slate-400 text-xs font-medium">حلول ذكية لحياة عصرية</p>
           </div>
         </div>
       </div>

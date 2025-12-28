@@ -3,14 +3,12 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
     <!-- SEO Meta Tags -->
     <title>Smart Source | حلول ذكية لحياة عصرية</title>
     <meta name="description" content="سمارت سورس هو وجهتك الأولى لأحدث الهواتف الذكية، الأجهزة المنزلية، ومنتجات العناية الشخصية. حلول تقنية ذكية لنمط حياة عصري." />
-    <meta name="keywords" content="موبايلات, آيفون, أجهزة منزلية ذكية, تكييفات, عناية شخصية, سمارت سورس, Smart Source" />
-    <meta name="author" content="إنجاز للحلول الذكية" />
-
+    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.9em%22 x=%2250%%22 font-size=%2270%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>S</text></svg>" />
 
@@ -23,14 +21,25 @@
       :root {
         scroll-padding-top: 100px;
       }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: 'IBM Plex Sans Arabic', sans-serif;
         background-color: #ffffff;
         color: #0f172a;
-        overflow-x: hidden;
+        overflow-x: hidden; /* يمنع التمرير العرضي تماماً */
+        width: 100%;
+        position: relative;
+        /* دعم مناطق الأمان في أجهزة آيفون والحديثة */
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
       }
       
-      /* Smooth Scroll Customization */
       html {
         scrollbar-gutter: stable;
       }
@@ -49,54 +58,46 @@
         background: #3b82f6;
       }
 
-      /* Advanced Animations */
+      /* Animations */
       @keyframes float-y {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-20px); }
       }
+      .animate-float-y { animation: float-y 5s ease-in-out infinite; }
       
       @keyframes float-x {
         0%, 100% { transform: translateX(0px); }
         50% { transform: translateX(15px); }
       }
+      .animate-float-x { animation: float-x 6s ease-in-out infinite; }
 
       @keyframes blob-bounce {
         0%, 100% { transform: scale(1); }
         50% { transform: scale(1.1) rotate(5deg); }
       }
-
-      .animate-float-y { animation: float-y 5s ease-in-out infinite; }
-      .animate-float-x { animation: float-x 6s ease-in-out infinite; }
       .animate-blob { animation: blob-bounce 10s ease-in-out infinite; }
       
-      /* Reveal on Scroll */
+      /* Reveal Transitions */
       .reveal, .reveal-left, .reveal-right {
         opacity: 0;
         transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
         will-change: transform, opacity;
       }
-      
       .reveal { transform: translateY(40px) scale(0.95); }
       .reveal-left { transform: translateX(-50px); }
       .reveal-right { transform: translateX(50px); }
-
       .reveal.active, .reveal-left.active, .reveal-right.active {
         opacity: 1;
         transform: translate(0) scale(1);
       }
 
-      /* Staggered items shouldn't be hidden by default if their parent is active */
       .stagger-item {
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .stagger-item.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      .stagger-item.active { opacity: 1; transform: translateY(0); }
 
-      /* Mesh Gradient Background */
       .mesh-gradient {
         background-color: #ffffff;
         background-image: 
@@ -109,6 +110,14 @@
       }
       .magnetic-button:hover {
         transform: translateY(-5px) scale(1.02);
+      }
+
+      /* تحسين الحواف في الأجهزة الصغيرة */
+      @media (max-width: 640px) {
+        .container {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
+        }
       }
     </style>
     
@@ -129,64 +138,41 @@
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
     <script>
-      /**
-       * Professional Scroll Reveal Engine
-       * Robust enough for dynamic SPAs like React
-       */
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            
-            // Handle staggered children if present
             if (entry.target.classList.contains('stagger-container')) {
               const children = entry.target.querySelectorAll('.stagger-item');
               children.forEach((child, index) => {
                 setTimeout(() => child.classList.add('active'), index * 100);
               });
             }
-            
-            // Once animated, we can stop observing this specific element
             revealObserver.unobserve(entry.target);
           }
         });
-      }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-      });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
-      // Function to start observing elements
       function initObserver() {
         const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
         elements.forEach(el => {
-          if (!el.classList.contains('active')) {
-            revealObserver.observe(el);
-          }
+          if (!el.classList.contains('active')) revealObserver.observe(el);
         });
       }
 
-      // Use MutationObserver to detect when React adds elements to the DOM
       const mutationObserver = new MutationObserver((mutations) => {
         let shouldRefresh = false;
-        mutations.forEach(mutation => {
-          if (mutation.addedNodes.length > 0) shouldRefresh = true;
-        });
+        mutations.forEach(mutation => { if (mutation.addedNodes.length > 0) shouldRefresh = true; });
         if (shouldRefresh) initObserver();
       });
 
-      // Start watching the root for changes
       document.addEventListener('DOMContentLoaded', () => {
         const root = document.getElementById('root');
-        if (root) {
-          mutationObserver.observe(root, { childList: true, subtree: true });
-        }
+        if (root) mutationObserver.observe(root, { childList: true, subtree: true });
         initObserver();
       });
 
-      // Fallback: Refresh occasionally for the first few seconds
-      [500, 1000, 2000, 4000].forEach(delay => {
-        setTimeout(initObserver, delay);
-      });
+      [500, 1000, 2000, 4000].forEach(delay => setTimeout(initObserver, delay));
     </script>
   </body>
 </html>
