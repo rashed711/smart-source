@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Smartphone, Zap, Sparkles, MoveLeft, ChevronRight, ChevronLeft } from 'lucide-react';
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&q=80&w=1200", // Mobile Technology
-  "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200", // Smart Home Interior
-  "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=1200", // Personal Care & Beauty
-  "https://images.unsplash.com/photo-1614359833899-63fafe025ee1?auto=format&fit=crop&q=80&w=1200", // Modern AC & Cooling
-  "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=1200"  // Tech Lifestyle
+  "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=1200",  // Tech Lifestyle
+  "https://i.pinimg.com/736x/8e/47/31/8e47318579d0592c90dd3a1bbe66580e.jpg", // Mobile Technology
+  "https://i.pinimg.com/1200x/e1/22/34/e122343ac7ddb125851689e1fb05cc4a.jpg", // Smart Home Interior
+  "https://i.pinimg.com/736x/95/51/db/9551dba43eb4c8373710ea21de06e204.jpg", // Personal Care & Beauty
+  "https://i.pinimg.com/736x/f3/8d/50/f38d5021f6aa24cc82ed963d84c01678.jpg" // Modern AC & Cooling
 ];
 
 const Hero: React.FC = () => {

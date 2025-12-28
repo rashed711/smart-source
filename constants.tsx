@@ -67,13 +67,6 @@ export const PERSONAL_CARE: Product[] = [
     name: "فرشاة أسنان ذكية",
     description: "عناية فائقة بالأسنان مع مستشعرات ضغط واتصال بالتطبيق.",
     image: "https://i.pinimg.com/1200x/b6/06/57/b60657ac5ac366028f011c832ebcfd1f.jpg"
-  },
-  {
-    id: 103,
-    name: "مسدس مساج ذكي",
-    description: "تخفيف آلام العضلات واسترخاء عميق مع 5 مستويات سرعة.",
-    image: "https://i.pinimg.com/474x/12/2f/2b/122f2b2143ee079ab0a5932a83481dd5.jpg",
-    tag: "رياضي"
   }
 ];
 
@@ -82,13 +75,13 @@ export const SMART_HOME: Product[] = [
     id: 7,
     name: "مكنسة روبوت ذكية",
     description: "كنس ومسح ذكي مع نظام رسم خرائط الليزر المتقدم.",
-    image: "https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.pinimg.com/736x/03/09/90/030990b703ef87b66bd50228fe5519d5.jpg"
   },
   {
     id: 8,
     name: "قلاية هوائية ديجيتال",
     description: "أكل صحي بلمسة زر واحدة بسعة كبيرة وشاشة لمس.",
-    image: "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.pinimg.com/1200x/f4/12/54/f41254bd0ece86c19ecc9406283a46af.jpg"
   }
 ];
 
