@@ -12,7 +12,7 @@ const About: React.FC = () => {
             <div className="relative z-10 grid grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-4 md:space-y-6">
                 <div className="aspect-[3/4] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1556656793-062ff9878258?auto=format&fit=crop&q=80&w=800" alt="Tech" className="w-full h-full object-cover" />
+                  <img src="https://i.pinimg.com/1200x/a1/51/1e/a1511e4ca46e14a6c3dec9cd5437d313.jpg" alt="Tech" className="w-full h-full object-cover" />
                 </div>
                 <div className="aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-xl translate-x-4 md:translate-x-12">
                   <img src="https://images.unsplash.com/photo-1593344484962-796055d4a3a4?auto=format&fit=crop&q=80&w=800" alt="Home" className="w-full h-full object-cover" />
@@ -20,7 +20,7 @@ const About: React.FC = () => {
               </div>
               <div className="space-y-4 md:space-y-6 pt-8 md:pt-12">
                 <div className="aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-xl -translate-x-4 md:-translate-x-12">
-                   <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=800" alt="Care" className="w-full h-full object-cover" />
+                   <img src="https://i.pinimg.com/1200x/bd/f3/0e/bdf30eb4e76d2be2a9f72c865a018e50.jpg" alt="Care" className="w-full h-full object-cover" />
                 </div>
                 <div className="aspect-[3/4] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl">
                   <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=800" alt="Office" className="w-full h-full object-cover" />

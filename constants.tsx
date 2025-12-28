@@ -36,7 +36,7 @@ export const MOBILE_PRODUCTS: Product[] = [
     id: 4,
     name: "شاحن سريع 65 وات",
     description: "شحن ذكي وآمن لجميع أجهزتك بتقنية GaN في وقت قياسي.",
-    image: "https://images.unsplash.com/photo-1625517345318-42f92b3cc0f5?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.pinimg.com/1200x/5f/06/48/5f06488795480086ea8918582bced6a1.jpg"
   }
 ];
 
@@ -45,34 +45,34 @@ export const PERSONAL_CARE: Product[] = [
     id: 5,
     name: "ماكينة حلاقة ذكية",
     description: "حلاقة دقيقة ومريحة تناسب الاستخدام اليومي الرطب والجاف.",
-    image: "https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.pinimg.com/1200x/c4/39/9a/c4399a0316cc78585d8afb4c25df853b.jpg",
     tag: "رجالي"
   },
   {
     id: 6,
     name: "جهاز تنظيف البشرة",
     description: "تقنية الموجات الصوتية لنضارة دائمة وتنظيف عميق للمسام.",
-    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.pinimg.com/1200x/43/ad/61/43ad61848b5d5171733bd8599e46a362.jpg",
     tag: "حريمي"
   },
   {
     id: 101,
     name: "جهاز ليزر منزلي IPL",
     description: "إزالة شعر آمنة وفعالة في المنزل بتقنية الضوء النبضي المكثف.",
-    image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.pinimg.com/1200x/c9/d6/3e/c9d63e8f431189ed8ec87808f2f66fa2.jpg",
     tag: "بريميوم"
   },
   {
     id: 102,
     name: "فرشاة أسنان ذكية",
     description: "عناية فائقة بالأسنان مع مستشعرات ضغط واتصال بالتطبيق.",
-    image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.pinimg.com/1200x/b6/06/57/b60657ac5ac366028f011c832ebcfd1f.jpg"
   },
   {
     id: 103,
     name: "مسدس مساج ذكي",
     description: "تخفيف آلام العضلات واسترخاء عميق مع 5 مستويات سرعة.",
-    image: "https://images.unsplash.com/photo-1631543533910-363bbdf7fccf?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.pinimg.com/474x/12/2f/2b/122f2b2143ee079ab0a5932a83481dd5.jpg",
     tag: "رياضي"
   }
 ];

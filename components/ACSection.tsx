@@ -10,7 +10,7 @@ const ACSection: React.FC = () => {
           <div className="lg:w-1/2 relative order-2 lg:order-1">
              <div className="absolute -z-10 w-full h-full bg-blue-50 rounded-[4rem] rotate-3 scale-110"></div>
              <img 
-               src="https://images.unsplash.com/photo-1594142465967-58197793d623?auto=format&fit=crop&q=80&w=1000" 
+               src="https://i.pinimg.com/1200x/f8/91/09/f89109f80845a454ac6c7325edc485cd.jpg" 
                alt="Modern AC Unit in home" 
                className="rounded-[3rem] shadow-2xl relative z-10"
              />
