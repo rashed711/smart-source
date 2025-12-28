@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Wind, Snowflake, Zap, Cloud } from 'lucide-react';
+import { Wind, Snowflake, Zap, MoveLeft } from 'lucide-react';
 
 const ACSection: React.FC = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="ac" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 relative order-2 lg:order-1">
@@ -30,7 +30,7 @@ const ACSection: React.FC = () => {
             <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">استمتع بجو مثالي <br /> طوال العام</h3>
             <p className="text-lg text-slate-600 mb-10">نقدم أحدث أجهزة التكييف المنزلية من كبرى الشركات العالمية، مع ميزات توفير الطاقة والتحكم الذكي وتوزيع الهواء المتطور.</p>
             
-            <div className="grid grid-cols-2 gap-6 text-right">
+            <div className="grid grid-cols-2 gap-6 text-right mb-10">
               <div className="p-6 rounded-2xl bg-blue-50 border border-blue-100">
                 <Wind className="text-blue-600 mb-3 w-8 h-8" />
                 <h4 className="font-bold text-slate-900 mb-1">توزيع هواء ذكي</h4>
@@ -42,6 +42,11 @@ const ACSection: React.FC = () => {
                 <p className="text-sm text-slate-500">تقنيات انفرتر متطورة لتقليل الاستهلاك.</p>
               </div>
             </div>
+
+            <a href="#contact" className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all">
+               اطلب استشارة مجانية
+               <MoveLeft size={18} />
+            </a>
           </div>
         </div>
       </div>

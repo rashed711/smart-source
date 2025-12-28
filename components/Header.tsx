@@ -26,10 +26,10 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled ? 'py-3' : 'py-6'}`}>
       <div className="container mx-auto px-6">
-        <div className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? 'bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] border border-white/40' : 'bg-transparent'}`}>
+        <div className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? 'bg-slate-50/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.1)] border border-slate-200' : 'bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm'}`}>
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-200">S</div>
-            <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}>Smart Source</span>
+            <span className={`text-xl font-black tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}>Smart Source</span>
           </div>
 
           {/* Desktop Nav */}
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
               <a 
                 key={link.href} 
                 href={link.href} 
-                className="text-slate-600 hover:text-blue-600 font-medium text-sm transition-all relative group"
+                className={`font-bold text-sm transition-all relative group ${isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-800 hover:text-blue-700'}`}
               >
                 {link.name}
                 <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
@@ -47,37 +47,37 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-             <a href="#contact" className="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all flex items-center gap-2 group">
+             <a href="#contact" className="bg-slate-900 text-white px-7 py-3 rounded-full text-sm font-black hover:bg-blue-600 transition-all flex items-center gap-2 group shadow-xl shadow-slate-900/10">
               تواصل معنا
               <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
           {/* Mobile Toggle */}
-          <button className="lg:hidden text-slate-900 p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="lg:hidden text-slate-900 p-2 hover:bg-slate-100 rounded-full transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`lg:hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsMobileMenuOpen(false)}></div>
+      <div className={`lg:hidden fixed inset-0 bg-slate-900/60 backdrop-blur-md transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsMobileMenuOpen(false)}></div>
       
       <div className={`lg:hidden fixed top-0 right-0 bottom-0 w-80 bg-white z-[101] transition-transform duration-500 ease-out shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-8 h-full flex flex-col">
           <div className="flex items-center justify-between mb-12">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">S</div>
-              <span className="text-xl font-bold text-slate-900">Smart Source</span>
+              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">S</div>
+              <span className="text-2xl font-black text-slate-900">Smart Source</span>
             </div>
-            <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-slate-400 hover:text-slate-900"><X size={24} /></button>
+            <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-slate-400 hover:text-slate-900 bg-slate-50 rounded-full"><X size={24} /></button>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             {navLinks.map((link) => (
               <a 
                 key={link.href} 
                 href={link.href} 
-                className="text-slate-600 hover:text-blue-600 font-semibold text-xl transition-all"
+                className="text-slate-700 hover:text-blue-600 font-bold text-2xl transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -85,11 +85,15 @@ const Header: React.FC = () => {
             ))}
             <a 
               href="#contact" 
-              className="mt-4 bg-blue-600 text-white text-center py-4 rounded-2xl font-bold shadow-lg shadow-blue-100"
+              className="mt-6 bg-slate-900 text-white text-center py-5 rounded-2xl font-black text-lg shadow-2xl shadow-slate-900/20 active:scale-95 transition-all"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              اطلب الآن
+              تواصل معنا الآن
             </a>
+          </div>
+          
+          <div className="mt-auto pt-10 text-center">
+            <p className="text-slate-400 text-xs font-medium">حلول ذكية لحياة عصرية</p>
           </div>
         </div>
       </div>
