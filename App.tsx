@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Smartphone, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -14,23 +14,8 @@ import Footer from './components/Footer';
 import { MOBILE_PRODUCTS } from './constants';
 
 const App: React.FC = () => {
-  useEffect(() => {
-    // Initial check for elements in view on load
-    const handleInitialReveal = () => {
-      const reveals = document.querySelectorAll('.reveal');
-      reveals.forEach(reveal => {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveal.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          reveal.classList.add('active');
-        }
-      });
-    };
-    handleInitialReveal();
-  }, []);
-
   return (
-    <div className="min-h-screen selection:bg-blue-100 selection:text-blue-900 bg-white">
+    <div className="min-h-screen selection:bg-blue-600 selection:text-white bg-white">
       <Header />
       
       <main>
@@ -40,14 +25,16 @@ const App: React.FC = () => {
           <About />
         </div>
 
-        <section id="mobiles" className="py-20 bg-white reveal">
-          <div className="container mx-auto px-4">
-            <div className="mb-12 text-center md:text-right">
-              <span className="text-blue-600 font-bold uppercase tracking-wider text-xs">الهواتف الذكية</span>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 mt-2">عالم بين يديك</h2>
-              <p className="text-slate-500 max-w-2xl md:mr-0">اكتشف أحدث الإصدارات من آبل وسامسونج، حيث تجتمع القوة مع الأناقة.</p>
+        <section id="mobiles" className="py-24 bg-white reveal">
+          <div className="container mx-auto px-6">
+            <div className="mb-16 text-center md:text-right">
+              <span className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] block mb-4">الهواتف الذكية</span>
+              <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 mt-2 leading-tight">عالم بين يديك</h2>
+              <p className="text-slate-500 max-w-2xl md:mr-0 text-lg">اكتشف أحدث الإصدارات من آبل وسامسونج، حيث تجتمع القوة مع الأناقة في تصاميم استثنائية.</p>
             </div>
-            <ProductGrid products={MOBILE_PRODUCTS} />
+            <div className="reveal">
+              <ProductGrid products={MOBILE_PRODUCTS} />
+            </div>
           </div>
         </section>
 
@@ -74,15 +61,16 @@ const App: React.FC = () => {
 
       <Footer />
       
-      {/* WhatsApp Floating Button with Animation */}
+      {/* WhatsApp Floating Button with Magnetic Animation */}
       <a 
         href="https://wa.me/1234567890" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-6 left-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all flex items-center justify-center whatsapp-pulse"
+        className="fixed bottom-8 left-8 z-50 bg-green-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 active:scale-90 transition-all duration-300 flex items-center justify-center whatsapp-pulse group"
         aria-label="Contact on WhatsApp"
       >
-        <MessageCircle size={28} />
+        <MessageCircle size={32} className="group-hover:rotate-12 transition-transform" />
+        <span className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 border-2 border-white rounded-full flex items-center justify-center text-[10px] font-bold">1</span>
       </a>
     </div>
   );
