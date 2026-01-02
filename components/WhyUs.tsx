@@ -29,7 +29,7 @@ const WhyUs: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-32 p-12 md:p-20 bg-slate-900 rounded-[4rem] text-center relative overflow-hidden reveal shadow-[0_50px_100px_-20px_rgba(15,23,42,0.3)]">
+        <div className="mt-32 p-8 md:p-20 bg-slate-900 rounded-[3rem] md:rounded-[4rem] text-center relative overflow-hidden reveal shadow-[0_50px_100px_-20px_rgba(15,23,42,0.3)]">
            {/* Moving background tech-pattern */}
            <div className="absolute inset-0 opacity-20 pointer-events-none">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2"></div>
@@ -38,8 +38,8 @@ const WhyUs: React.FC = () => {
            </div>
            
            <div className="relative z-10">
-              <h3 className="text-4xl md:text-6xl font-black text-white mb-12 leading-tight">هل أنت جاهز لترقية <br /> نمط حياتك اليوم؟</h3>
-              <a href="#contact" className="magnetic-button inline-block px-14 py-6 bg-blue-600 text-white rounded-[2rem] font-black text-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-2xl shadow-blue-600/30">
+              <h3 className="text-3xl md:text-6xl font-black text-white mb-10 leading-tight">هل أنت جاهز لترقية <br /> نمط حياتك اليوم؟</h3>
+              <a href="#contact" className="magnetic-button inline-block px-10 py-5 sm:px-14 sm:py-6 bg-blue-600 text-white rounded-[1.5rem] sm:rounded-[2rem] font-black text-lg sm:text-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-2xl shadow-blue-600/30">
                 تواصل معنا الآن
               </a>
            </div>

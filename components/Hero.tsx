@@ -61,15 +61,15 @@ const Hero: React.FC = () => {
               في سمارت سورس، ننتقي لك بعناية فائقة أحدث ما وصلت إليه التكنولوجيا لنجعل حياتك اليومية أسهل، أجمل، وأكثر كفاءة.
             </p>
             
-            <div className="reveal flex flex-col sm:flex-row justify-center lg:justify-start gap-6" style={{ transitionDelay: '300ms' }}>
-              <a href="#mobiles" className="magnetic-button relative group overflow-hidden px-12 py-6 bg-slate-900 text-white rounded-[2rem] font-black text-xl transition-all shadow-2xl shadow-slate-900/20">
+            <div className="reveal flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6" style={{ transitionDelay: '300ms' }}>
+              <a href="#mobiles" className="magnetic-button relative group overflow-hidden px-8 py-4 sm:px-12 sm:py-6 bg-slate-900 text-white rounded-[1.5rem] sm:rounded-[2rem] font-black text-base sm:text-xl transition-all shadow-2xl shadow-slate-900/20">
                 <span className="relative z-10 flex items-center justify-center gap-3">
                   تصفح المنتجات
                   <MoveLeft size={22} className="group-hover:-translate-x-2 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-blue-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
               </a>
-              <a href="#about" className="magnetic-button px-12 py-6 bg-white/80 backdrop-blur-md text-slate-900 border-2 border-slate-100 rounded-[2rem] font-black text-xl hover:border-blue-600 hover:bg-white transition-all flex items-center justify-center">
+              <a href="#about" className="magnetic-button px-8 py-4 sm:px-12 sm:py-6 bg-white/80 backdrop-blur-md text-slate-900 border-2 border-slate-100 rounded-[1.5rem] sm:rounded-[2rem] font-black text-base sm:text-xl hover:border-blue-600 hover:bg-white transition-all flex items-center justify-center">
                 تعرف علينا
               </a>
             </div>

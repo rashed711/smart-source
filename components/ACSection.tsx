@@ -43,7 +43,7 @@ const ACSection: React.FC = () => {
               </div>
             </div>
 
-            <a href="#contact" className="magnetic-button inline-flex items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-[2rem] font-black text-lg hover:bg-blue-600 transition-all shadow-xl shadow-slate-200">
+            <a href="#contact" className="magnetic-button inline-flex items-center gap-4 bg-slate-900 text-white px-8 py-4 sm:px-10 sm:py-5 rounded-[1.5rem] sm:rounded-[2rem] font-black text-base sm:text-lg hover:bg-blue-600 transition-all shadow-xl shadow-slate-200">
                اطلب استشارة مجانية
                <MoveLeft size={22} />
             </a>

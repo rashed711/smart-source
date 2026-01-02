@@ -57,7 +57,7 @@ const HomeAppliancesSection: React.FC = () => {
                     ))}
                   </ul>
 
-                  <a href="#contact" className="w-full py-4 bg-white text-slate-950 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center gap-3">
+                  <a href="#contact" className="w-full py-3 sm:py-4 bg-white text-slate-950 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base">
                     تواصل معنا للتفاصيل
                     <ArrowLeft size={20} />
                   </a>

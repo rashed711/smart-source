@@ -85,7 +85,7 @@ const Header: React.FC = () => {
             ))}
             <a 
               href="#contact" 
-              className="mt-6 bg-slate-900 text-white text-center py-5 rounded-2xl font-black text-lg shadow-2xl shadow-slate-900/20 active:scale-95 transition-all"
+              className="mt-6 bg-slate-900 text-white text-center py-4 rounded-2xl font-black text-base shadow-2xl shadow-slate-900/20 active:scale-95 transition-all"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               تواصل معنا الآن
