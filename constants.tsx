@@ -40,12 +40,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 // --- العلامات التجارية (شركاء النجاح) ---
 export const BRANDS: Brand[] = [
-  { name: 'LG', logo: 'https://i.pinimg.com/736x/03/09/90/030990b703ef87b66bd50228fe5519d5.jpg' },
-  { name: 'Samsung', logo: 'https://i.pinimg.com/736x/03/09/90/sd.jpg' },
-  { name: 'Gree', logo: 'https://i.pinimg.com/736x/03/09/90/tyghhhg.jpg' },
-  { name: 'Daikin', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Daikin_logo.svg/2560px-Daikin_logo.svg.png' },
-  { name: 'York', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/York_International_logo.svg/2560px-York_International_logo.svg.png' },
-  { name: 'Carrier', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Carrier_logo.svg/2560px-Carrier_logo.svg.png' }
+  { name: 'LG', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRraVvIfk4RZE6AyAWJXI-LBnQTaO48xIV4zQ&s' },
+  { name: 'Samsung', logo: 'https://images.samsung.com/is/image/samsung/assets/levant_ar/about-us/brand/logo/mo/360_197_1.png?$720_N_PNG$' },
+  { name: 'Gree', logo: 'https://crystalpng.com/wp-content/uploads/2025/03/gree-logo.png' },
+  { name: 'Daikin', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJqq3UfR_PFgHmk7h5XwiSDV7vzxxSHo-jGw&s' },
+  { name: 'York', logo: 'https://cdn.worldvectorlogo.com/logos/york.svg' },
+  { name: 'Carrier', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqphnLCkZg8n22TuPmHJG4wrWS9BWPrR4uQ&s' }
 ];
 
 // --- المنتجات ---
