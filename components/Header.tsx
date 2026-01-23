@@ -15,6 +15,25 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80; // تعويض ارتفاع الهيدر
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,6 +49,7 @@ const Header: React.FC = () => {
               <a 
                 key={link.href} 
                 href={link.href} 
+                onClick={(e) => handleNavLinkClick(e, link.href)}
                 className="font-bold text-sm transition-all relative group text-slate-700 hover:text-blue-600"
               >
                 {link.name}
@@ -39,7 +59,11 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-             <a href="#contact" className="bg-slate-900 text-white px-7 py-3 rounded-full text-sm font-black hover:bg-blue-600 transition-all flex items-center gap-2 group shadow-xl shadow-slate-900/10">
+             <a 
+              href="#contact" 
+              onClick={(e) => handleNavLinkClick(e, '#contact')}
+              className="bg-slate-900 text-white px-7 py-3 rounded-full text-sm font-black hover:bg-blue-600 transition-all flex items-center gap-2 group shadow-xl shadow-slate-900/10"
+             >
               تواصل معنا
               <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
@@ -70,7 +94,7 @@ const Header: React.FC = () => {
                 key={link.href} 
                 href={link.href} 
                 className="text-slate-700 hover:text-blue-600 font-bold text-2xl transition-all"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavLinkClick(e, link.href)}
               >
                 {link.name}
               </a>
@@ -78,7 +102,7 @@ const Header: React.FC = () => {
             <a 
               href="#contact" 
               className="mt-6 bg-slate-900 text-white text-center py-4 rounded-2xl font-black text-base shadow-2xl shadow-slate-900/20 active:scale-95 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavLinkClick(e, '#contact')}
             >
               تواصل معنا الآن
             </a>

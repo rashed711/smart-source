@@ -38,14 +38,14 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { platform: 'twitter', url: 'https://twitter.com' }
 ];
 
-// --- العلامات التجارية (شركاء النجاح) ---
+// --- العلامات التجارية (شركاء النجاح) - تحديث الشعارات بجودة عالية ---
 export const BRANDS: Brand[] = [
-  { name: 'LG', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRraVvIfk4RZE6AyAWJXI-LBnQTaO48xIV4zQ&s' },
-  { name: 'Samsung', logo: 'https://images.samsung.com/is/image/samsung/assets/levant_ar/about-us/brand/logo/mo/360_197_1.png?$720_N_PNG$' },
-  { name: 'Gree', logo: 'https://crystalpng.com/wp-content/uploads/2025/03/gree-logo.png' },
-  { name: 'Daikin', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJqq3UfR_PFgHmk7h5XwiSDV7vzxxSHo-jGw&s' },
-  { name: 'York', logo: 'https://cdn.worldvectorlogo.com/logos/york.svg' },
-  { name: 'Carrier', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqphnLCkZg8n22TuPmHJG4wrWS9BWPrR4uQ&s' }
+  { name: 'LG', logo: 'https://smartsource-eg.com/images/partners/006.jpg' },
+  { name: 'Samsung', logo: 'https://smartsource-eg.com/images/partners/005.jpg' },
+  { name: 'Gree', logo: 'https://smartsource-eg.com/images/partners/003.jpg' },
+  { name: 'Daikin', logo: 'https://smartsource-eg.com/images/partners/002.jpg' },
+  { name: 'York', logo: 'https://smartsource-eg.com/images/partners/004.jpg' },
+  { name: 'Carrier', logo: 'https://smartsource-eg.com/images/partners/001.jpg' }
 ];
 
 // --- المنتجات ---
