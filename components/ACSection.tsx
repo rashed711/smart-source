@@ -146,7 +146,7 @@ const ACSection: React.FC = () => {
         <div className="reveal border-t border-slate-100 pt-24 pb-12">
           <div className="text-center mb-20">
             <span className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">شركاء النجاح</span>
-            <h3 className="text-2xl md:text-5xl font-black text-slate-900 leading-tight">وكلاء معتمدون لأكبر الماركات</h3>
+            <h3 className="text-2xl md:text-5xl font-black text-slate-900 leading-tight">توريد وصيانة اكبر الماركات العالمية</h3>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 items-center">
